@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 8px;
+
+  --fontPara: 'Titillium Web', sans-serif, Arial, Helvetica;
+  --fontHeader: 'Bebas Neue', Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0vw;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333341;
+  border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a49;
+}
+
+body {
+  background-color: #16161b;
+  color: white;
+
+  font-family: var(--fontPara);
+  font-size: 2rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+}
+
+h1, h2, h3, h4 
+{
+  font-family: var(--fontHeader);
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 12px;
+  font-size: 3.4rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: black 0 0 8px 0;
+  will-change: transform;
+  transition: transform 0.75s ease;
+  z-index: 2;
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+
+.nav-btn-on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-btn-fast {
+  transition: transform 0.2s ease;
+}
+
+.nav-btn-prev {
+  left: 0px;
+  border-radius: 0 8px 8px 0;
+  background-color: rgb(155, 0, 52);
+  padding: 0.3em 0.75em 0.3em 0.1em;
+}
+
+.nav-btn-prev:hover {
+  transform: translateX(2.5rem);
+}
+
+.nav-btn-prev::before {
+  content: ' ⮜';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -3.2rem;
+  top: 0;
+  bottom: 0;
+  border-right: rgb(155, 0, 52) 2px solid;
+  background-color: rgb(155, 0, 52);
+}
+
+.nav-btn-next {
+  right: 0px;
+  border-radius: 8px 0 0 8px;
+  background-color: rgb(0, 101, 216);
+  padding: 0.3em 0.1em 0.3em 0.75em;
+}
+
+.nav-btn-next:hover {
+  transform: translateX(-2.5rem);
+}
+
+.nav-btn-next::after {
+  content: '⮞ ';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -3.2rem;
+  top: 0;
+  bottom: 0;
+  border-left: rgb(0, 101, 216) 2px solid;
+  background-color: rgb(0, 101, 216);
+}
+
+.page * {
+  opacity: 0;
+  transform: translateY(12px);
+  transition-duration: 450ms;
+}
+
+.page-delay {
+  transition-delay: 500ms;
+}
+
+.shown * {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("./assets/images/mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header div {
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 12%;
+  text-shadow: black 0px 4px 8px;
+}
+
+header div h1 {
+  font-size: 17rem;
+  color: rgb(255, 198, 41);
+}
+
+header div h2 {
+  font-size: 10rem;
+}
+
+header button {
+  font-size: 5rem;
+  padding: 0.47em 0.6em;
+  text-transform: uppercase;
+  background: rgb(0, 0, 0, 0.5);
+  border: none;
+  text-shadow: black 0px 0px 8px;
+  color: white;
+  font-weight: bold;
+  will-change: transform;
+  transform: scale(1);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  border-radius: 42px;
+}
+header button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background: rgb(0, 0, 0, 0.7);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  min-height: 100vh;
+  border-top: 7px solid #101013;
+  padding: 4.5em;
+}
+
+section h2 {
+  font-size: 5rem;
+}
+
+section p {
+  font-size: 3rem;
+}
+
+section div {
+  width: 50%;
+  padding: 0 1em;
+}
+
+section div img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#page3, #page4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page5 {
+  padding: 0;
+}
+
+#page5 div {
+  width: 100%;
+  min-height: 75vh;
+  padding: 0;
+  background-image: url("./assets/images/smellmoney.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#page5 blockquote {
+  margin: 0 auto;
+  padding: 2.5em;
+  font-size: 2.5rem;
+  position: relative;
+  line-height: 1.25;
+  max-width: 75ch;
+  background:rgb(0, 0, 0, 0.5);
+  text-shadow: rgb(0, 0, 0, 0.8) 4px 4px 8px;
+}
+
+#page5 p {
+  text-shadow: rgb(0, 0, 0, 0.8) 4px 4px 8px;
+  font-weight: bold;
+}
+
+#page5 blockquote::before, #page5 blockquote::after {
+  content: '"';
+  font-weight: bold;
+  font-family: var(--fontHeader);
+  font-size: 7rem;
+  position: absolute;
+  z-index: 1;
+  line-height: 1.5;
+}
+
+#page5 blockquote::before {
+  top: 0%;
+  left: 2.5rem;
+}
+
+#page5 blockquote::after {
+  bottom: -3rem;
+  right: 2.5rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 40vh;
+  background: #0e0e11;
+  font-size: 3rem;
+}
+
+footer h2 {
+  font-size: 8rem;
+}
+
+@media screen AND (max-width: 600px) {
+  :root {
+    font-size: 4px;
+  }
+
+  #page5 blockquote {
+    max-width: 85%;
+  }
+}

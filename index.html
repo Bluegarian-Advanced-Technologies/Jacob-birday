@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jacob Birthday</title>
+
+    <meta name="author" content="Emperor of Bluegaria (Jack H.)" />
+    <meta name="description" content="Birthday card type website for Jacob" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="nav-btn nav-btn-next" href="#page2" id="next" tabindex="-1">Next page </a>
+    <a class="nav-btn nav-btn-prev" href="#" id="prev" tabindex="-1"> Prev. page </a>
+
+    <main>
+      <header id="page1" class="page">
+        <div>
+          <h1>Happy Birthday</h1>
+          <h2>Jacob!</h2>
+        </div>
+        <a href="#page2" id="init">
+          <button>Next page</button>
+        </a>
+      </header>
+
+      <section id="page2" class="flex-row page">
+        <div class="card-left">
+          <h2>Dear Jacob,</h2>
+          <br />
+          <p>
+            Happy birthday sirrr, you are a very nice friend I really appricate you very much. You are very funny and chill to hang out with. I hope you enjoy
+            your gift on the next page!!
+          </p>
+          <br />
+          <p style="font-weight: bold">Signed by your friend: <br />Jack</p>
+        </div>
+        <div class="card-right" style="transition-delay: 600ms">
+          <img src="./assets/images/together.JPG" alt="Forest together picture" style="transition-delay: 600ms" />
+        </div>
+      </section>
+
+      <section id="page3" class="page" style="transition-delay: 1000ms">
+        <p style="text-align: center; font-size: 6rem; font-weight: bold">ARE YOU READY FOR PRESENT?!?!?</p>
+      </section>
+
+      <section id="page4" class="page" style="transition-delay: 1000ms">
+        <p style="text-align: center; font-size: 6rem; font-weight: bold">Open the envelope! <br />(only go to next page after opening)</p>
+      </section>
+
+      <section id="page5" class="page" style="transition-delay: 700ms">
+        <p style="text-align: center; font-size: 6rem; font-weight: bold">POGGERS $20!!!!</p>
+        <div>
+          <blockquote>
+            Money is the best gift for material gain, especially in the context of a birthday present. This is because the same money would have be used to
+            purchase an item for them anyway, with the additional cost of ruining the surprise from needing to inquire on their desired item. Furthurmore, they
+            can truly decide what they would like to spend with the money: whether it may be personal or public. Plus, they could change their mind on what to
+            purchase at anytime and the money would seamlessly adapt to the new conditions. In conclusion, money is the best gift. <br /><br /><strong
+              >Enjoy, Jacob!</strong
+            >
+          </blockquote>
+          <p>- Me (Jack)</p>
+        </div>
+      </section>
+
+      <footer class="page" id="page6">
+        <h2>End of card.</h2>
+        <p>Website built by me with code :)</p>
+        <br />
+        <p style="transition-delay: 800ms">Scroll controls regained</p>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 750,
+        speedAsDuration: true,
+        easing: "easeOutQuad",
+      });
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
