@@ -54,6 +54,12 @@
 
       document.getElementsByTagName("head")[0].appendChild(link);
     }
+
+    if (currentPage === 5)
+    {
+      document.querySelector(".confetti").classList.add("confetti--shown");
+    }
+
     if (currentPage + 1 > pages.length) return;
     currentPage++;
     nextBtn.href = `${window.location.href.split("#")[0]}#page${currentPage}`;
