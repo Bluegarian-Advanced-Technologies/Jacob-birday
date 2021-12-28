@@ -55,8 +55,7 @@
       document.getElementsByTagName("head")[0].appendChild(link);
     }
 
-    if (currentPage === 5)
-    {
+    if (currentPage === 5) {
       document.querySelector(".confetti").classList.add("confetti--shown");
     }
 
@@ -156,6 +155,12 @@
       page.classList.add("page-delay");
       animatePageIn(page);
     });
+
+    document.querySelector(".loading-block").style.opacity = 0;
+
+    setTimeout(() => {
+      document.querySelector(".loading-block").remove();
+    }, 300);
   });
 
   disableScroll();

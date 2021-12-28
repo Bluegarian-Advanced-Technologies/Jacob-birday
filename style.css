@@ -32,6 +32,25 @@
   background: #3a3a49;
 }
 
+.loading-block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #16161b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.loading-block h2 {
+  font-size: 9rem;
+  font-weight: normal;
+}
+
 body {
   background-color: #16161b;
   color: white;
